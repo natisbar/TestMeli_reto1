@@ -6,6 +6,7 @@
 package pruebaTestMeli;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  *
@@ -18,7 +19,11 @@ public class mutanteMain {
      * @throws java.io.IOException
      */
     public static void main(String[] args) throws IOException {
-        String[] dna = {"AAAAGA","CGGTGC","TTATGA","ATAGGC","CTGATA","TCATTG"};
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese las bases separadas por coma y sin comillas: ");
+        //String[] dna = {"AAAAGA","CGGTGC","TTATGA","ATAGGC","CTGATA","TCATTG"};
+        String dna_limpio = sc.nextLine().trim();
+        String[] dna = dna_limpio.split(",");
         String baseNitrogenada = dna[0];
         boolean validarSecuencia = false;
         boolean validarBaseIndividual = false;
